@@ -56,9 +56,9 @@ public class ArticleController {
     }
 
     // 이름으로 조회
-    @GetMapping("api/posts/{query}")
-    public ResponseDto<?> getPostByBoardName(@PathVariable String query){
-        return articleService.getPostByBoardName(query);
+    @GetMapping("api/posts/{boardName}")
+    public ResponseDto<?> getPostByBoardName(@PathVariable String boardName){
+        return articleService.getPostByBoardName(boardName);
     }
 
 }

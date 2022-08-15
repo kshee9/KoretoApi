@@ -192,9 +192,9 @@ public class ArticleService {
 
 
     //이름 게시글 불러오기
-    public  ResponseDto<?> getPostByBoardName( String query){
+    public  ResponseDto<?> getPostByBoardName( String boardName){
 
-        List<Article> articles = articleRepository.findAllByTitleContains(query);
+        List<Article> articles = articleRepository.findAllByTitleContains(boardName);
 
         List<ArticleResponseDto> resultDto = new ArrayList<>();
 
