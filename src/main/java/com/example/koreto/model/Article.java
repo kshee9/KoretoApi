@@ -32,9 +32,6 @@ public class Article extends Timestamped{
     @Column
     private int view_count;
 
-    @Column(nullable = false)
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime createdDate;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "board_id")

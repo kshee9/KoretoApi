@@ -90,7 +90,6 @@ public class ArticleService {
         ArticleResponseDto articleResponseDto =  ArticleResponseDto.builder()
                 .title(articleRequestDto.getTitle())
                 .content(articleRequestDto.getContent())
-                .createdDate(articleRequestDto.getCreatedDate())
                 .build();
 
         log.info("제목 : " + articleRequestDto.getTitle());

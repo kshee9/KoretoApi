@@ -16,6 +16,5 @@ public class ArticleRequestDto {
 
     private  String content;
 
-    private LocalDateTime createdDate;
 
 }
