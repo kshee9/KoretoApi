@@ -1,13 +1,9 @@
 package com.example.koreto.model;
 
-import com.example.koreto.dto.ArticleResponseDto;
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.example.koreto.dto.ArticleRequestDto;
 import lombok.*;
-import net.bytebuddy.asm.Advice;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -42,7 +38,7 @@ public class Article extends Timestamped{
     private List<Attachment> attachmentList;
 
     //생성때 저장용
-    public Article(ArticleResponseDto articleResponseDto) {
+    public Article(ArticleRequestDto articleResponseDto) {
         this.title = articleResponseDto.getTitle();
         this.content = articleResponseDto.getContent();
     }

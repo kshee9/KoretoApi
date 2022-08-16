@@ -20,6 +20,8 @@ public class ArticleResponseDto {
 
     private  String content;
 
+    private Long boardid;
+
     @DateTimeFormat(pattern = "yyyy-mm-dd")
     private LocalDateTime createdDate;
 

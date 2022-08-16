@@ -86,18 +86,20 @@ public class ArticleService {
 //        // 엔티티 저장
 //        List<Attachment> allattachment = attachmentRepository.saveAll(attachments);
 
+        Article article = new Article(articleRequestDto);
+
+        articleRepository.save(article);
 
         ArticleResponseDto articleResponseDto =  ArticleResponseDto.builder()
                 .title(articleRequestDto.getTitle())
                 .content(articleRequestDto.getContent())
+                .boardid(articleRequestDto.getBoardid())
+                .createdDate(article.getCreatedDate())
                 .build();
 
         log.info("제목 : " + articleRequestDto.getTitle());
         log.info("내용 : " + articleRequestDto.getContent());
 
-        Article article = new Article(articleResponseDto);
-
-        articleRepository.save(article);
 
 
         return new ResponseDto<>("성공", articleResponseDto);

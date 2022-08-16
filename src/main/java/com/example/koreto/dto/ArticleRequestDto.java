@@ -16,5 +16,6 @@ public class ArticleRequestDto {
 
     private  String content;
 
+    private  Long boardid;
 
 }
